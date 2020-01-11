@@ -10,9 +10,8 @@ def open_and_read_file(file_path):
     Takes a string that is a file path, opens the file, and turns
     the file's contents as one string of text.
     """
-
     text = ''
-    for file in filepath:
+    for file in file_path:
         text_file = open(file)
         text = text + text_file.read()
         text_file.close()
@@ -92,7 +91,7 @@ def make_text(chains):
     return " ".join(words)
 
 # Get the filepath from the user through a command line prompt, ex:
-# python markov.py preamble.txt
+# python markov.py kanye.txt
 
 input_path = sys.argv[1:]
 
